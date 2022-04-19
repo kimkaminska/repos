@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class try4 {
 
     public static void main(String[] args) {
-        Scanner num = new Scanner(System.in);
+        Scanner str = new Scanner(System.in);
+        System.out.println("Your string is: " + str.nextLine());
     }
 }
