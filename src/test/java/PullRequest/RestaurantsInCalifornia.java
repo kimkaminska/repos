@@ -32,4 +32,16 @@ public class RestaurantsInCalifornia {
         Assert.assertTrue(driver.findElement(By.xpath("//p[text()= 'No available restaurants']")).isDisplayed());
         driver.quit();
     }
+
+    @Test
+    public void CheckTheCart () {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://eatstreet.com/");
+        driver.manage().window().maximize();
+        driver.findElements(By.xpath("//div[@class='navbar__icon']")).get(1).click();
+        Assert.assertTrue(driver.findElement(By.xpath("//a[text()='Your Cart is Empty']")).isDisplayed());
+        driver.quit();
+    }
+
 }
